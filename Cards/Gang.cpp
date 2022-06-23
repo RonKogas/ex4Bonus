@@ -27,6 +27,7 @@ void Gang::applyEncounter(Player& player) const
     if(!lostBattle)
     {
         player.levelUp();
+        printWinBattle(player.getName(), "Gang");
     }
 }
 
@@ -75,7 +76,7 @@ Gang& Gang::operator=(const Gang& gang)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what();
     }
     m_monsters.clear();
     for(const std::unique_ptr<Battle>& monster : newMonsters)
@@ -83,4 +84,20 @@ Gang& Gang::operator=(const Gang& gang)
         addMonsterToVector(m_monsters, monster->getType());
     }
     return *this;
+}
+
+Gang::Gang(const Gang& gang):
+Card("Gang")
+{
+    try
+    {
+        for(const std::unique_ptr<Battle>& monster : gang.m_monsters)
+        {
+            addMonsterToVector(m_monsters, monster->getType());
+        }
+    }
+    catch (const std::exception& excep)
+    {
+        std::cerr<<excep.what();
+    }
 }

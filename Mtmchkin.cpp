@@ -48,7 +48,6 @@ const int LOSING_HP = 0;
 
 Mtmchkin::Mtmchkin(const std::string &fileName) {
     printStartGameMessage();
-    std::cout<<"currentCard";
     ifstream sourceFile(fileName);
     if (!sourceFile) {
         throw DeckFileNotFound();

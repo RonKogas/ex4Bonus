@@ -44,6 +44,12 @@ public:
      * @return Gang& 
      */
     Gang& operator=(const Gang&);
+    /**
+     * @brief Construct a new Gang object
+     * copy c'tor for Gang
+     * 
+     */
+    Gang(const Gang&);
 private:
     std::vector<std::unique_ptr<Battle>> m_monsters; 
     /**

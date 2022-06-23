@@ -95,6 +95,13 @@ private:
      * @param job - Class of player ("Rogue","Wizard" etc)
      */
     void addPlayerToGame(const std::string name, const std::string job);
+    /**
+     * assignment operator
+     * and copy c'tor deleted
+     * 
+     */
+    Mtmchkin& operator=(const Mtmchkin&) = delete;
+    Mtmchkin(const Mtmchkin&) = delete;
     
 };
 bool isNullptr(const std::unique_ptr<Player>& player);
