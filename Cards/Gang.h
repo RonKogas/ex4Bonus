@@ -11,6 +11,7 @@
 #include "Vampire.h"
 #include "../Exception.h"
 
+
 class Gang : public Card
 {
 public:

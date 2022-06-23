@@ -1,7 +1,7 @@
 #include "Fairy.h"
 
 Fairy::Fairy():
-Card("Fairy"),
+Card(FAIRY),
 m_HPToIncrese(HP_TO_INCRESE)
 {
 

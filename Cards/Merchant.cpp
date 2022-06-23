@@ -9,7 +9,7 @@ const int HP_TYPE = 1;
 const int FORCE_TYPE = 2; 
 
 Merchant::Merchant() :
-Card("Merchant"),
+Card(MERCHANT),
 m_HPPrice(HP_PRICE),
 m_forcePrice(FORCE_PRICE)
 {

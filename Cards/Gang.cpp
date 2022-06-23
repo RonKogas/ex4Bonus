@@ -1,8 +1,7 @@
 #include "Gang.h"
 
-
 Gang::Gang():
-Card("Gang")
+Card(GANG)
 {
 
 }
@@ -27,7 +26,7 @@ void Gang::applyEncounter(Player& player) const
     if(!lostBattle)
     {
         player.levelUp();
-        printWinBattle(player.getName(), "Gang");
+        printWinBattle(player.getName(), GANG);
     }
 }
 
@@ -51,9 +50,9 @@ void Gang::addMonster(std::string monster, int numOfLine)
 void Gang::addMonsterToVector(std::vector<std::unique_ptr<Battle>>& vector, std::string monster)
 {
     std::map<std::string, std::unique_ptr<Battle>> monsterMap;
-    monsterMap["Dragon"] = std::unique_ptr<Battle>(new Dragon());
-    monsterMap["Goblin"] = std::unique_ptr<Battle>(new Goblin());
-    monsterMap["Vampire"] = std::unique_ptr<Battle>(new Vampire());
+    monsterMap[DRAGON] = std::unique_ptr<Battle>(new Dragon());
+    monsterMap[GOBLIN] = std::unique_ptr<Battle>(new Goblin());
+    monsterMap[VAMPIRE] = std::unique_ptr<Battle>(new Vampire());
     if (monsterMap[monster] == nullptr){
         throw InvalidPushToVector();
     }
@@ -87,7 +86,7 @@ Gang& Gang::operator=(const Gang& gang)
 }
 
 Gang::Gang(const Gang& gang):
-Card("Gang")
+Card(GANG)
 {
     try
     {

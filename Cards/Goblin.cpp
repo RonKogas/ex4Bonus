@@ -2,7 +2,7 @@
 
 
 Goblin::Goblin():
-Battle("Goblin", GOBLIN_FORCE, GOBLIN_LOOT),
+Battle(GOBLIN, GOBLIN_FORCE, GOBLIN_LOOT),
 m_damage(GOBLIN_DAMAGE)
 {
 

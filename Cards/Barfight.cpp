@@ -1,7 +1,7 @@
 #include "Barfight.h"
 
 Barfight::Barfight() :
-Card("Barfight"),
+Card(BARFIGHT),
 m_damage(DAMAGE)
 {
 

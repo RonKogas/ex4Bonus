@@ -1,7 +1,7 @@
 #include "Vampire.h"
 
 Vampire::Vampire():
-Battle("Vampire", VAMPIRE_FORCE, VAMPIRE_LOOT),
+Battle(VAMPIRE, VAMPIRE_FORCE, VAMPIRE_LOOT),
 m_damage(VAMPIRE_DAMAGE),
 m_forceDamage(VAMPIRE_FORCE_DAMAGE)
 {

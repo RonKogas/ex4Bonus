@@ -1,7 +1,7 @@
 #include "Treasure.h"
 
 Treasure::Treasure() :
-Card("Treasure"),
+Card(TREASURE),
 m_coinsInTreasure(COINS_IN_TREASURE)
 {
 

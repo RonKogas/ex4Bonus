@@ -9,8 +9,20 @@
 #include "../Players/Rogue.h"
 #include "../Players/Wizard.h"
 
-
-//enum class CardType {Vempire, Goblin, Dragon, Merchant, Treasure, Pitfall, Barfight, Fairy};
+using std::string;
+    const string BARFIGHT = "Barfight";
+    const string DRAGON = "Dragon";
+    const string FAIRY = "Fairy";
+    const string GOBLIN = "Goblin";
+    const string MERCHANT = "Merchant";
+    const string PITFALL = "Pitfall";
+    const string TREASURE = "Treasure";
+    const string VAMPIRE = "Vampire";
+    const string FIGHTER = "Fighter";
+    const string ROGUE = "Rogue";
+    const string WIZARD = "Wizard";
+    const string GANG = "Gang";
+    const string END_GANG = "EndGang";
 
 class Card
 {

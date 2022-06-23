@@ -1,7 +1,7 @@
 #include "Pitfall.h"
 
 Pitfall::Pitfall():
-Card("Pitfall"),
+Card(PITFALL),
 m_damage(HP_DAMAGE)
 {
 

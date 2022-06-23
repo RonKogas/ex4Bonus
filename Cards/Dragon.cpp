@@ -2,7 +2,7 @@
 const int DRAGON_DAMAGE = 0;
 
 Dragon::Dragon():
-Battle("Dragon", DRAGON_FORCE, DRAGON_LOOT)
+Battle(DRAGON, DRAGON_FORCE, DRAGON_LOOT)
 {
 
 }
