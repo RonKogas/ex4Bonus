@@ -77,7 +77,7 @@ void Mtmchkin::initializeCardDeck(std::ifstream& sourceFile)
     }
     if(inGang)
     {
-        throw DeckFileFormatError(currentLine);
+        throw DeckFileFormatError(currentLine + 1);
     }
     if (numOfCards < MIN_AMOUNT_OF_CARDS) {
         throw DeckFileInvalidSize();
