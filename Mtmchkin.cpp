@@ -48,6 +48,7 @@ const int LOSING_HP = 0;
 
 Mtmchkin::Mtmchkin(const std::string &fileName) {
     printStartGameMessage();
+    std::cout<<"currentCard";
     ifstream sourceFile(fileName);
     if (!sourceFile) {
         throw DeckFileNotFound();
@@ -73,18 +74,24 @@ void Mtmchkin::initializeCardDeck(std::ifstream& sourceFile)
         else if(inGang && currentCard==END_GANG)
         {
             m_deck.push_back(move(currentGang));
+            inGang = false;
         }
 
         else if(!inGang && currentCard==GANG)
         {
             currentGang = unique_ptr<Gang>(new Gang());
             numOfCards++;
+            inGang = true;
         }
         else
         {
             numOfCards++;
             addCardToDeck(currentCard, currentLine);
         }
+    }
+    if(inGang)
+    {
+        throw DeckFileFormatError(currentLine);
     }
     if (numOfCards < MIN_AMOUNT_OF_CARDS) {
         throw DeckFileInvalidSize();

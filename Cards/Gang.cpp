@@ -20,6 +20,7 @@ void Gang::applyEncounter(Player& player) const
         else
         {
             monster->applyLoss(player);
+            printLossBattle(player.getName(), monster->getType());
             lostBattle=true;
         }
     }
